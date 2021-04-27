@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@font-face{  font-family: 'Sega';
+    src: url(./fonts/SEGA.woff);
+}
 
 * {
   box-sizing: border-box;
@@ -9,15 +12,12 @@
 body {
   font-family: "Poppins", sans-serif;
   text-align: center;
+  background-image: linear-gradient(to right,#01747b ,#062356);
 }
 
 .container {
   overflow: auto;
-  border: 2px solid steelblue;
   padding: 30px;
-  border-radius: 5px;
-  background: rgb(53, 73, 90);
-  color: white;
 }
 
 .loader {
@@ -35,9 +35,12 @@ body {
 }
 
 h1 {
+  font-family: 'Sega';
   text-align: center;
   font-size: 60px;
   font-weight: 700;
+  margin-bottom: 20px;
+  color: #0ccac4;
 }
 input {
   height: 45px;
@@ -54,7 +57,8 @@ input {
 }
 
 .card {
-  background: steelblue;
+  background: #9eebcf;
+  color: #000;
   width: 300px;
   margin: 10px;
   padding: 10px;

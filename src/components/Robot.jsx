@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const Robot = ({ robot }) => {
   const [showDetail, setShowDetail] = useState(false);
   const imgUrl = `https://robohash.org/${robot.id}`;
@@ -20,23 +21,17 @@ const Robot = ({ robot }) => {
           <h4>Address</h4>
           <h5 style={{ fontSize: "11px" }}>
             {" "}
-            <span style={{ fontStyle: "italic", color: "#111" }}>
-              {" "}
-              City:{" "}
-            </span>{" "}
+            <span style={{ fontStyle: "italic" }}> City: </span>{" "}
             {robot.address.city}
           </h5>
           <h5 style={{ fontSize: "11px" }}>
             {" "}
-            <span style={{ fontStyle: "italic", color: "#111" }}>
-              {" "}
-              Street:{" "}
-            </span>
+            <span style={{ fontStyle: "italic" }}> Street: </span>
             {robot.address.street}{" "}
           </h5>
           <h5 style={{ fontSize: "11px" }}>
             {" "}
-            <span style={{ fontStyle: "italic", color: "#111" }}> Suite: </span>
+            <span style={{ fontStyle: "italic" }}> Suite: </span>
             {robot.address.suite}{" "}
           </h5>
           <h4>
@@ -48,20 +43,16 @@ const Robot = ({ robot }) => {
           <h4>Company</h4>
           <h5 style={{ fontSize: "11px" }}>
             {" "}
-            <span style={{ fontStyle: "italic", color: "#111" }}>
-              Name:{" "}
-            </span>{" "}
+            <span style={{ fontStyle: "italic" }}>Name: </span>{" "}
             {robot.company.name}
           </h5>
           <h5 style={{ fontSize: "11px" }}>
-            <span style={{ fontStyle: "italic", color: "#111" }}>
-              Catch Phrase:{" "}
-            </span>
+            <span style={{ fontStyle: "italic" }}>Catch Phrase: </span>
             {robot.company.catchPhrase}{" "}
           </h5>
           <h5 style={{ fontSize: "11px" }}>
             {" "}
-            <span style={{ fontStyle: "italic", color: "#111" }}>Bs: </span>
+            <span style={{ fontStyle: "italic" }}>Bs: </span>
             {robot.company.bs}{" "}
           </h5>
           <span
@@ -70,8 +61,10 @@ const Robot = ({ robot }) => {
               fontSize: "10px",
               color: "darkblue",
               textAlign: "center",
+              cursor:"pointer"
             }}
-          ><br/>
+          >
+            <br />
             Click to see Profile
           </span>
         </div>
@@ -81,10 +74,8 @@ const Robot = ({ robot }) => {
           <img src={imgUrl} alt="User" />
           <h3>{robot.name}</h3>
           <h4>{robot.email}</h4>
-          <span
-            style={{ textWeight: "bold", fontSize: "10px", color: "darkblue" }}
-          >
-            Click to see Details
+          <span style={{ textWeight: "bold", fontSize: "10px",color:"darkblue" , cursor:"pointer"}}>
+           Click to see Details
           </span>
         </>
       )}

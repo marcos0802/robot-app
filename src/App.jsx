@@ -13,13 +13,13 @@ const App = () => {
       setLoading(false);
       setRobots(robotsFromServer);
       setFilteredData(robotsFromServer);
-      console.table(robotsFromServer)
+      console.table(robotsFromServer);
     };
     getRobots();
   }, []);
 
   const fetchRobots = async () => {
-    const res = await fetch("http://jsonplaceholder.typicode.com/users");
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await res.json();
     return data;
   };
@@ -38,23 +38,23 @@ const App = () => {
 
   return (
     <div className="container">
-      <>
-        {isLoading ? (
-          <div className="loader"></div>
-        ) : (
-          <div>
-            {" "}
-            <h1>My Robots</h1>
-            <input
-              type="text"
-              onChange={(event) => _searchRobot(event)}
-              placeholder="Search by Name"
-            />
-            <Robots robots={filteredData} />
-          </div>
-        )}
-      </>
-    </div>
+              <>
+                {isLoading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <div>
+                    {" "}
+                    <h1>My robot friends</h1>
+                    <input
+                      type="text"
+                      onChange={(event) => _searchRobot(event)}
+                      placeholder="Search by Name"
+                    />
+                    <Robots robots={filteredData} />
+                  </div>
+                )}
+              </>
+            </div>
   );
 };
 
